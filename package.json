@@ -1,0 +1,13 @@
+{
+  "name": "autopost",
+  "version": "1.0.0",
+  "description": "Reddit bot that automatically posts to subreddits",
+  "main": "index.js",
+  "repository": "https://github.com/Weilbyte/autopost.git",
+  "author": "Weilbyte <git@weilbyte.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "snoowrap": "^1.21.0",
+    "yaml": "^1.9.2"
+  }
+}
