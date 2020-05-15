@@ -2,12 +2,17 @@
   "name": "autopost",
   "version": "1.0.0",
   "description": "Reddit bot that automatically posts to subreddits",
-  "main": "index.js",
+  "main": "index.ts",
   "repository": "https://github.com/Weilbyte/autopost.git",
-  "author": "Weilbyte <git@weilbyte.dev>",
+  "author": "Weilbyte <me@weilbyte.dev>",
   "license": "MIT",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
   "dependencies": {
-    "snoowrap": "^1.21.0",
-    "yaml": "^1.9.2"
+    "@types/js-yaml": "^3.12.3",
+    "@types/node": "^14.0.1",
+    "js-yaml": "^3.13.1",
+    "snoowrap": "^1.21.0"
   }
 }
