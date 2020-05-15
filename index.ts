@@ -1,5 +1,5 @@
 import { validateRules, parseRules, ruleInterface } from './rules';
-import { digest} from './reddit';
+import { digest, auth} from './reddit';
 
 if (!validateRules()) {
     console.log('[FATAL] Please ensure all rules are formatted properly.') 
@@ -13,4 +13,9 @@ async function test(rule : ruleInterface) {
     }, rule.every)
 }
 
-parseRules(test);
+ if (!auth()) {
+    console.log('[FATAL] Missing required environment variables for authentication.');
+    process.exit(1);
+ } else {
+    parseRules(test);
+ }
