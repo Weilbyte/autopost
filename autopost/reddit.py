@@ -6,7 +6,8 @@ import time
 import praw
 
 def environVarPresent():
-    """Checks if the required environment variables are present
+    """
+    Checks if the required environment variables are present
 
     Returns:
     bool: True if present, otherwise False
@@ -16,7 +17,8 @@ def environVarPresent():
     return True
 
 def getInstance():
-    """Creates an instance of praw.Reddit
+    """
+    Creates an instance of praw.Reddit
 
     Returns:
     reddit: The created instance
@@ -33,7 +35,8 @@ def getInstance():
     return redditInstance
 
 def digest(rule):
-    """Processes the rule.
+    """
+    Processes the rule.
 
     Parameters:
     rule (dict): The rule to be processed
@@ -48,7 +51,8 @@ def digest(rule):
     reply(redditInstance, rule, submission)
 
 def submit(redditInstance, rule):
-    """Submits rule post to subreddit.
+    """
+    Submits rule post to subreddit.
 
     Parameters:
     redditInstance (Reddit): The Reddit instance to use
@@ -63,7 +67,8 @@ def submit(redditInstance, rule):
         return redditInstance.subreddit(rule.subreddit).submit(title=random.choice(rule.titles), url=random.choice(rule.bodies), flair_id=rule.flair)
 
 def setFlairID(redditInstance, rule):
-    """Sets rule flair.
+    """
+    Sets rule flair.
 
     If rule.flair is either None or a flair ID then it doesn't change anything.
     Otherwise if rule.flair is flair text then it looks through the subreddits flairs and tries to find a flair text the same as rule.flair.
@@ -85,7 +90,8 @@ def setFlairID(redditInstance, rule):
         sys.exit(f'[FATAL] Could not find flair id for {rule.flair} in r/{rule.subreddit}')
 
 def reply(redditInstance, rule, submission):
-    """Replies to a submission.
+    """
+    Replies to a submission.
 
     It replies to the submission with a random comment from rule.comments (if it is not None).
 
