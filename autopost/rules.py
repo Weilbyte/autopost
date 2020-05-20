@@ -5,6 +5,9 @@ class Rule:
     Rule object.
     """
     def __init__(self, subreddit, kind, titles, bodies, comments, flair, every):
+        """
+        Initializes a Rule class
+        """
         self.subreddit = subreddit
         self.kind = kind
         self.titles = titles
