@@ -3,8 +3,7 @@ import threading
 import reddit as reddit
 
 def scheduleRule(rule):
-    """
-    Schedules a rule to run every X seconds
+    """Schedules a rule to run every X seconds
 
     Parameters:
     rule (class): Rule to be scheduled

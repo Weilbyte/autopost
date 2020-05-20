@@ -1,9 +1,7 @@
 import yaml
 
 class Rule:
-    """
-    Rule object.
-    """
+    """Rule object."""
     def __init__(self, subreddit, kind, titles, bodies, comments, flair, every):
         """
         Initializes a Rule class
@@ -17,8 +15,7 @@ class Rule:
         self.every = every
 
 def parseRules(rules, callback):
-    """
-    Parses rules into interfaces and provides them as arg to callback.
+    """Parses rules into interfaces and provides them as arg to callback.
 
     Parameters:
     rules (dict): Rules YAML dict
@@ -37,8 +34,7 @@ def parseRules(rules, callback):
         callback(IRule)
 
 def validateRules(rules):
-    """
-    Valiates the YAML rules file.
+    """Valiates the YAML rules file.
 
     Parameters:
     rules (dict): Rules YAML dict
@@ -52,8 +48,7 @@ def validateRules(rules):
     return True
 
 def ruleValid(rule):
-    """
-    Checks whether or not a rule has all required properties.
+    """Checks whether or not a rule has all required properties.
 
     Parameters:
     rule (dict): A single rule
@@ -72,8 +67,7 @@ def ruleValid(rule):
         return True
 
 def getYAML(file):
-    """
-    Returns loaded YAML from a file.
+    """Returns loaded YAML from a file.
 
     Parameters:
     file (string): Path to the YAML file
