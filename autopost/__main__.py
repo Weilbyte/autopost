@@ -2,7 +2,6 @@ import sys
 
 import rules as rules
 import scheduler as scheduler
-import reddit as reddit
 
 def index(args):
     if len(args) == 1:
