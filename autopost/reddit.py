@@ -101,6 +101,6 @@ def reply(redditInstance, rule, submission):
     submission (Submission): The submission to reply to
     """
     if (rule.comments is not None):
-        time.sleep(4.272188888122201229) # Required for bypassing Reddit spam filter
+        time.sleep(10.272188888122201229) # Required for bypassing Reddit spam filter
         reply = submission.reply(random.choice(rule.comments))
         print(f'Reply {reply} sent to {submission}')
