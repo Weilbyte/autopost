@@ -1,9 +1,9 @@
 import os
-import sys 
+import sys
 import random
 import time
 
-import praw 
+import praw
 
 def environVarPresent():
     """
@@ -13,7 +13,7 @@ def environVarPresent():
     bool: True if present, otherwise False
     """
     if (os.environ.get('USER_AGENT') == None) or (os.environ.get('CLIENT_ID') == None) or (os.environ.get('CLIENT_SECRET') == None) or (os.environ.get('USERNAME') == None) or (os.environ.get('PASSWORD') == None):
-        return False 
+        return False
     return True
 
 def getInstance():
@@ -71,8 +71,8 @@ def setFlairID(redditInstance, rule):
     Sets rule flair.
 
     If rule.flair is either None or a flair ID then it doesn't change anything.
-    Otherwise if rule.flair is flair text then it looks through the subreddits flairs and tries to find a flair text the same as rule.flair. 
-    When found, it sets rule.flair to the flair's ID. 
+    Otherwise if rule.flair is flair text then it looks through the subreddits flairs and tries to find a flair text the same as rule.flair.
+    When found, it sets rule.flair to the flair's ID.
 
     Parameters:
     redditInstance (Reddit): The Reddit instance to use
